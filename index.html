@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TAI Fellow Program | Trustworthy AI at GW</title>
+<meta name="description" content="The Trustworthy AI (TAI) Fellow Program is for PhD students at the George Washington University, in any discipline, who want to join a community of scholars interested in trustworthy AI.">
+<style>
+  :root {
+    /* Colors from the GW web palette (trustworthyai.gwu.edu) */
+    --gw-blue: #033C5A;
+    --navy: #00223E;
+    --potomac: #0075C8;
+    --buff: #D6BF91;
+    --utility-buff: #E3DCCC;
+    --ink: #212529;
+    --muted: #495057;
+    --wash: #F7F5EF;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--ink);
+    background: #fff;
+  }
+  a { color: var(--potomac); }
+  a:focus-visible { outline: 3px solid var(--buff); outline-offset: 3px; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+
+  .topbar { background: var(--navy); color: #fff; font-size: 15px; }
+  .topbar .wrap {
+    display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+    gap: 4px 24px; padding-top: 10px; padding-bottom: 10px;
+  }
+  .topbar .name { font-weight: 700; letter-spacing: .03em; }
+  .topbar nav { display: flex; flex-wrap: wrap; gap: 4px 20px; }
+  .topbar a { color: #fff; text-decoration: none; }
+  .topbar a:hover { text-decoration: underline; }
+
+  .hero {
+    position: relative; color: #fff;
+    background: var(--gw-blue) url("images/hero-whiteboard.jpg") center / cover no-repeat;
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(90deg, rgba(0,34,62,.93) 0%, rgba(3,60,90,.80) 55%, rgba(3,60,90,.40) 100%);
+  }
+  .hero .wrap { position: relative; padding-top: 72px; padding-bottom: 72px; }
+  h1 {
+    margin: 0 0 12px; font-size: clamp(2rem, 6vw, 3.25rem);
+    line-height: 1.1; font-weight: 800; letter-spacing: -.01em;
+  }
+  .hero p { margin: 0 0 28px; max-width: 34ch; font-size: 1.25rem; }
+  .btn {
+    display: inline-block; padding: 12px 22px; border-radius: 2px;
+    background: var(--potomac); color: #fff; font-weight: 700; text-decoration: none;
+  }
+  .btn:hover { background: #005FA3; }
+  .rule { height: 8px; background: var(--buff); }
+
+  section { padding: 56px 0; }
+  h2 { margin: 0 0 16px; font-size: 1.75rem; line-height: 1.2; font-weight: 800; color: var(--gw-blue); }
+  h2::after { content: ""; display: block; width: 64px; height: 4px; margin-top: 12px; background: var(--buff); }
+  .lead { max-width: 62ch; margin: 0 0 12px; font-size: 1.2rem; }
+  .band { background: var(--wash); }
+
+  .cards { display: grid; grid-template-columns: 1fr; gap: 20px; margin: 28px 0 0; padding: 0; list-style: none; }
+  .card {
+    display: flex; flex-direction: column; padding: 24px; background: #fff;
+    border: 1px solid var(--utility-buff); border-top: 6px solid var(--gw-blue);
+  }
+  .season { font-size: 14px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--potomac); }
+  .card h3 { margin: 6px 0 10px; font-size: 1.3rem; line-height: 1.25; color: var(--gw-blue); }
+  .card p { margin: 0 0 16px; }
+  .card .more { margin-top: auto; font-weight: 700; text-decoration: none; }
+  .card .more:hover { text-decoration: underline; }
+
+  .photos { display: grid; grid-template-columns: 1fr; gap: 20px; }
+  figure { margin: 0; }
+  figure img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+  figcaption { padding-top: 8px; font-size: .95rem; color: var(--muted); }
+
+  .also { margin: 28px 0 0; }
+
+  .visits { list-style: none; max-width: 760px; margin: 20px 0 36px; padding: 0; border-top: 1px solid var(--utility-buff); }
+  .visits li { display: grid; grid-template-columns: 3.6em 1fr; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--utility-buff); }
+  .visits .yr { font-weight: 700; color: var(--gw-blue); }
+  .sources { max-width: 70ch; margin: 0; padding-left: 1.2em; }
+  .sources li { margin-bottom: 10px; }
+
+  .contact { background: var(--gw-blue); color: #fff; }
+  .contact h2 { color: #fff; }
+  .contact p { margin: 0; font-size: 1.2rem; }
+  .contact a { color: #fff; font-weight: 700; }
+
+  @media (min-width: 700px) { .photos { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 820px) {
+    .cards { grid-template-columns: repeat(3, 1fr); }
+    .hero .wrap { padding-top: 104px; padding-bottom: 104px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="name">TAI Fellow Program</span>
+    <nav aria-label="Related sites">
+      <a href="https://trustworthyai.gwu.edu/">GW Trustworthy AI Initiative</a>
+      <a href="https://pless.github.io/trustworthyAI/">Trustworthy AI course</a>
+    </nav>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Trustworthy AI Fellow Program</h1>
+    <p>A community of scholars for GW PhD students in any discipline.</p>
+    <a class="btn" href="mailto:pless@gwu.edu">Email for more information</a>
+  </div>
+</header>
+<div class="rule"></div>
+
+<main>
+  <section>
+    <div class="wrap">
+      <h2>About the program</h2>
+      <p class="lead">The TAI Fellow Program is for PhD students at GW, in any discipline, who want to join a community of scholars interested in trustworthy AI.</p>
+      <p class="lead">We welcome students who come to trustworthy AI from a technical, social, governance, legal, medical, artistic, or humanities perspective.</p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>What fellows do</h2>
+      <p class="lead">Fellows take part in three activities.</p>
+      <ul class="cards">
+        <li class="card">
+          <span class="season">Fall</span>
+          <h3>Trustworthy AI course</h3>
+          <p>Take the Trustworthy AI course (CSCI 6510 / EMSE 6992).</p>
+          <a class="more" href="https://pless.github.io/trustworthyAI/">Course website</a>
+        </li>
+        <li class="card">
+          <span class="season">Spring</span>
+          <h3>PhD seminar</h3>
+          <p>Join the zero-credit PhD seminar (EMSE 6901) for a deep dive into trustworthy AI topics.</p>
+        </li>
+        <li class="card">
+          <span class="season">Summer</span>
+          <h3>Summer incubator</h3>
+          <p>Join the Trustworthy AI summer incubator, usually four weeks around June. Work with each other, with experts, and with industry collaborators to prototype or explore how AI affects something in the real world right now.</p>
+          <a class="more" href="#wild">Past site visits</a>
+        </li>
+      </ul>
+      <p class="lead also">Fellows can also attend other GW Trustworthy AI activities, such as talks and workshops. See the <a href="https://trustworthyai.gwu.edu/events">GW TAI events page</a>.</p>
+    </div>
+  </section>
+
+  <section id="wild">
+    <div class="wrap">
+      <h2>AI in the wild</h2>
+      <p class="lead">The incubator starts with visits to places where people use AI in their work. Past visits and guests:</p>
+      <ul class="visits">
+        <li><span class="yr">2025</span><span>Children&rsquo;s National Hospital</span></li>
+        <li><span class="yr">2025</span><span>The MITRE Corporation</span></li>
+        <li><span class="yr">2025</span><span>WMATA, the Metro system</span></li>
+        <li><span class="yr">2023</span><span>Whole Foods &ldquo;Just Walk Out&rdquo; store in Northwest DC</span></li>
+        <li><span class="yr">2023</span><span>GW robotics and drone labs</span></li>
+        <li><span class="yr">2023</span><span>A senior data scientist from USAID, on campus</span></li>
+        <li><span class="yr">2022</span><span>Virginia Task Force 1 search-and-rescue training site</span></li>
+        <li><span class="yr">2022</span><span>MITRE in Tysons Corner: autonomous vehicle and air traffic control labs</span></li>
+        <li><span class="yr">2022</span><span>Comcast, on campus: AI in voice remotes and home security cameras</span></li>
+      </ul>
+      <div class="photos">
+        <figure>
+          <img src="images/ai-in-the-wild-metro.jpg" alt="A group of people listen to a speaker beside a Metro train in a rail yard." width="1600" height="530">
+          <figcaption>An &ldquo;AI in the wild&rdquo; visit to Metro, 2025.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/research-showcase-2026.jpg" alt="People read research posters in a hall, next to a GW Trustworthy AI Initiative banner." width="1200" height="800">
+          <figcaption>The 2026 research showcase.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>More about the incubator</h2>
+      <ul class="sources">
+        <li><a href="https://trustworthyai.gwu.edu/gw-phd-fellows-apply-ai-real-world-problems">GW PhD Fellows Apply AI to Real-World Problems</a> (GW Trustworthy AI Initiative, 2026)</li>
+        <li><a href="https://trustworthyai.gwu.edu/summer-incubator-challenges-phd-fellows-address-real-world-interdisciplinary-problems">Summer Incubator Challenges PhD Fellows to Address Real-World Interdisciplinary Problems</a> (GW Trustworthy AI Initiative, 2025)</li>
+        <li><a href="https://par.nsf.gov/biblio/10522680">Building Interdisciplinarity in Engineering Doctoral Education: Insights from DTAIS Summer Incubator</a> (conference paper, 2024)</li>
+        <li><a href="https://gwtoday.gwu.edu/summer-boot-camp-seeks-kickstart-new-research-trustworthy-artificial-intelligence">Summer Boot Camp Seeks to Kickstart New Research on &lsquo;Trustworthy&rsquo; Artificial Intelligence</a> (GW Today, 2022)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p>For more information, email Robert Pless at <a href="mailto:pless@gwu.edu">pless@gwu.edu</a>.</p>
+    </div>
+  </section>
+</main>
+
+</body>
+</html>
